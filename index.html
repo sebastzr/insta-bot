@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Arturito</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <link href="resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="resources/main.css">
+    </head>
+    <body>
+      <div class="row justify-content-center">
+        <h1 class="appname">Arturito</h1>
+      </div>
+      <div class="row justify-content-center">
+        <p class="appdescription">Automatic Follow and Unfollow for Instagram!</p>
+      </div>
+      <div class="row justify-content-center">
+          <div class="login-content card">         
+              <div class="login-form">
+                <h4>Your instagram credentials</h4>
+                <form role="form">    
+                  <div class="form-group">   
+                    <label>Username</label>
+                    <input id="username" class="form-control" placeholder="username" type="text" name="username">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input id="password" class="form-control" placeholder="password" type="password" name="password">
+                  </div>
+                  <div class="checkbox"></div>
+                    <label class="checkbox"><input checked id="checkbox" class="checkbox" type="checkbox" name="remember"> Remember credentials</label>
+                  </div>
+                </form>
+            </div>
+          </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <div class="login-content card">         
+              <div class="login-form">
+                <h4>Follow</h4>
+                <form role="form">    
+                  <div class="form-group">   
+                    <label>Target!</label>
+                    <input id="followTarget" class="form-control" placeholder="Steal them!" type="text" name="target">
+                  </div>
+                  <div class="form-group">
+                    <label>Amount</label>
+                    <input id="followAmount" class="form-control" placeholder="How many?" type="number" name="followAmount">
+                  </div>
+                </form>
+                <a href="./resources/views/follow.html"><button id="followBtn" class="btn btn-primary btn-flat m-b-30 m-t-30">Follow</button></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col text-center">
+            <div class="login-content card">         
+                <div class="login-form">
+                  <h4>Unfollow</h4>
+                  <form role="form">    
+                    <div class="form-group">
+                      <label>Amount</label>
+                      <input id="unfollowAmount" class="form-control" placeholder="How many?" type="number" name="unfollowAmount">
+                    </div>
+                  </form>
+                  <a href="./resources/views/unfollow.html"><button id="unfollowBtn" class="btn btn-primary btn-flat m-b-30 m-t-30">Unfollow</button></a>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!--
+      Estamos usando node <script>document.write(process.versions.node)</script>,
+      Chrome <script>document.write(process.versions.chrome)</script>,
+      y Electron <script>document.write(process.versions.electron)</script>.
+      -->
+
+      <script>
+        require("./index.js")
+      </script>
+    </body>
+  </html>
